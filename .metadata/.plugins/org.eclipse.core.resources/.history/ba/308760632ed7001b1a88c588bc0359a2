@@ -29,4 +29,5 @@ public class Main {
 //		課題のsumOfメソッドを出力
 		System.out.println(service.sumOf(3, 5));
 	}
+
 }

@@ -25,8 +25,6 @@ public class Main {
 		for (Member mem : list) {
 			System.out.println(mem.getId() + "," + mem.getName() + "," + mem.getEmail());
 		}
-		
-//		課題のsumOfメソッドを出力
-		System.out.println(service.sumOf(3, 5));
 	}
+
 }

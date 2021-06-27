@@ -14,7 +14,4 @@ public interface MemberService {
 	
 //	複数のmemberをリストにして返す（会員の一覧データを返す）メソッド！
 	ArrayList<Member> getAll();
-	
-//	課題のsumOfメソッド
-	int sumOf(int x, int y);
 }

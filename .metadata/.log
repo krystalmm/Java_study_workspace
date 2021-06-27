@@ -523,3 +523,57 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:33:08.443
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.plskLJOz => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:38:39.946
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:38:39.947
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@13daaa8e[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=831)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:38:39.947
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:38:41.903
+!MESSAGE 起動から初期化までの Boot LS 起動時間: 1956ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:38:41.989
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.zxckBwaOisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:38:41.990
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:38:41.990
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:38:41.990
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:38:41.990
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:38:41.991
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.zxckBwaO => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:38:41.991
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:38:41.991
+!MESSAGE buffering callback sts4.classpath.zxckBwaO Review false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:38:41.991
+!MESSAGE executing callback sts4.classpath.zxckBwaO 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:38:42.309
+!MESSAGE executing callback sts4.classpath.zxckBwaO SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:59:43.195
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.zxckBwaO
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:59:43.196
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.zxckBwaO
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:59:43.196
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:59:43.197
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.zxckBwaO => OK

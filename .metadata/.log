@@ -577,3 +577,45 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-27 18:59:43.197
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.zxckBwaO => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-30 09:46:43.806
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-30 09:46:43.813
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@13daaa8e[org.springframework.tooling.boot.ls:1.26.0.202106150606(id=831)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-30 09:46:43.814
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-30 09:46:48.151
+!MESSAGE 起動から初期化までの Boot LS 起動時間: 4331ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-30 09:46:48.242
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.GybxlWDKisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-30 09:46:48.243
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-30 09:46:48.244
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-30 09:46:48.245
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-30 09:46:48.245
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-30 09:46:48.246
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.GybxlWDK => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-30 09:46:48.247
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-30 09:46:48.247
+!MESSAGE buffering callback sts4.classpath.GybxlWDK Review false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-30 09:46:48.248
+!MESSAGE executing callback sts4.classpath.GybxlWDK 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-30 09:46:48.674
+!MESSAGE executing callback sts4.classpath.GybxlWDK SUCCESS [done]

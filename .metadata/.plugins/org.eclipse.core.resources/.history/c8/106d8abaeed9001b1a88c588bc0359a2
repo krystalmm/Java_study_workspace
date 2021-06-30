@@ -3,7 +3,6 @@ package demo;
 import java.util.ArrayList;
 
 import entity.Member;
-import service.MemberService;
 import service.MemberServiceImpl;
 
 // 実行するクラス
@@ -12,13 +11,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 //		MemberServiceImplをserviceという名前で初期化
-//		シングルトンにしたので、newできなくなった！
-//		MemberServiceImpl service = new MemberServiceImpl();
-//		getInstanceメソッドを使って呼び出す！
-//		MemberServiceImpl service = MemberServiceImpl.getInstance();
-//		以下のように、インターフェースの型で呼び出すこともできる！（この場合、インターフェースが持っているメソッドに機能が制限される！！今回は同じなので問題なし！）
-//		インターフェースの型で呼び出す理由は、MemberServiceImpl.getInstance()を呼び出すときにまだクラスが作られていない可能性があるから！（単体テストでは疑似クラスを作り、ひとまず代替えのインスタンスを格納する）
-		MemberService service = MemberServiceImpl.getInstance();
+		MemberServiceImpl service = new MemberServiceImpl();
 		
 //		greetメソッドを出力
 		System.out.println(service.greet(2));

@@ -6,17 +6,6 @@ import entity.Member;
 
 public class MemberServiceImpl implements MemberService {
 	
-//	シングルトンにするためにフィールド追加
-	private static MemberServiceImpl singleton = new MemberServiceImpl();
-	
-//	シングルトンにするためにprivateのコンストラクタを追加（外からnewできなくする！）
-	private MemberServiceImpl() {};
-	
-//	インスタンスを呼び出すためのメソッドを用意（外からはnewできないため！）
-	public static MemberServiceImpl getInstance() {
-		return singleton;
-	}
-	
 //	オーバーライドとはクラスを継承する時に、スーパークラスのメソッドをサブクラスにおいて同じメソッド名で定義し直すこと！アノテーションをつけておくと、わかりやすくなる！
 	@Override
 	public String greet(int i) {

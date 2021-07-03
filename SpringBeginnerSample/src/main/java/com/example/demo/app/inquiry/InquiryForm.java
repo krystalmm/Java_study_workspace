@@ -5,7 +5,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 // HTMLと値をやりとりするFormクラス
-public class inquiryForm {
+public class InquiryForm {
 	
 	// それぞれ@でvalidation追加
 	@Size(min = 1, max = 20, message = "Please input 20characters or less.")
@@ -19,7 +19,7 @@ public class inquiryForm {
 	private String contents;
 	
 	// デフォルトのコンストラクタ（newしたときにjavaのデフォルト値がそれぞれのフィールドに設定される形になる！）
-	public inquiryForm() {
+	public InquiryForm() {
 	}
 	
 	// getterとsetterを用意！

@@ -1,6 +1,7 @@
 package com.example.demo.app.inquiry;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,6 +25,17 @@ public class InquiryController {
 	@Autowired
 	public InquiryController(InquiryService inquiryService) {
 		this.inquiryService = inquiryService;
+	}
+	
+	@RequestMapping(method = RequestMethod.GET)
+	public String index(Model model) {
+		// 一覧に表示するリストをinquiryServiceのgetAllメソッドでとってくる!
+		List<Inquiry> list = inquiryService.getAll();
+		// 上記listをinquiryListとしてViewで使えるようにする！
+		model.addAttribute("inquiryList", list);
+		model.addAttribute("title", "Inquiry Index");
+		
+		return "inquiry/index";
 	}
 	
 	@RequestMapping(value = "/form", method = RequestMethod.GET)
@@ -62,8 +74,8 @@ public class InquiryController {
 		// Inquiry（Entity）クラスにデータを詰め替える必要があるため初期化！
 		Inquiry inquiry = new Inquiry();
 		inquiry.setName(inquiryForm.getName());
-		inquiry.setEmail(inquiry.getEmail());
-		inquiry.setContents(inquiry.getContents());
+		inquiry.setEmail(inquiryForm.getEmail());
+		inquiry.setContents(inquiryForm.getContents());
 		// createdはLocalDateTime.nowを使って自動生成する
 		inquiry.setCreated(LocalDateTime.now());
 		// serviceのsaveメソッドを使って、フォームに入力された値をDBへ登録！

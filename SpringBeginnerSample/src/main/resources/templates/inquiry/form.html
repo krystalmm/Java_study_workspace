@@ -6,6 +6,8 @@
 </head>
 <body>
 <h1 th:text="${title}"></h1>
+<!-- フラッシュスコープのcompleteの値を受け取る -->
+<h2 th:text="${complete}"></h2>
 <!-- @{}の書き方をすると、ドメインに付け加えたURLになる！ここでは、localhost:8080/inquiry/confirm -->
 <form method="post" action="#" th:action="@{/inquiry/confirm}" th:object="${inquiryForm}">
 	<label for="name">お名前:</label>

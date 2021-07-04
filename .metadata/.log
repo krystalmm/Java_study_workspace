@@ -2913,3 +2913,21 @@ java.util.concurrent.TimeoutException
 
 !ENTRY Activator 1 0 2021-07-03 12:41:11.201
 !MESSAGE Has main method computation for project 'SpringBeginnerSample'
+
+!ENTRY Activator 1 0 2021-07-04 11:55:42.793
+!MESSAGE Has main method computation for project 'SpringBeginnerSample'
+
+!ENTRY Activator 1 0 2021-07-04 11:55:43.386
+!MESSAGE Has main method computation for project 'SpringBeginnerSample'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-04 11:58:59.415
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.awYtuaHX
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-04 11:58:59.415
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.awYtuaHX
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-04 11:58:59.415
+!MESSAGE subsribers = {sts4.classpath.XecRGCqv=クラスパス通知の送信(1420)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-04 11:58:59.416
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.awYtuaHX => OK

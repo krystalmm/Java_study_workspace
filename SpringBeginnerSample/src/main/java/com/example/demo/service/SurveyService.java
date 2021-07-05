@@ -1,5 +1,11 @@
 package com.example.demo.service;
 
-public interface SurveyService {
+import java.util.List;
 
+import com.example.demo.entity.Survey;
+
+public interface SurveyService {
+	void save(Survey survey);
+	
+	List<Survey> getAll();
 }

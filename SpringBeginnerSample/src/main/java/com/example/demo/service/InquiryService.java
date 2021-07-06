@@ -9,4 +9,6 @@ public interface InquiryService {
 	void save(Inquiry inquiry);
 	
 	List<Inquiry> getAll();
+	
+	void update(Inquiry inquiry);
 }

@@ -30,4 +30,12 @@ public class InquiryServiceImpl implements InquiryService {
 		// InquiryDaoImplで実装したgetAllメソッドを返す！
 		return dao.getAll();
 	}
+	
+	@Override
+	public void update(Inquiry inquiry) {
+		// updateが0件だった場合に例外が発生してしまうので、独自で作成した例外処理で例外をスローする！
+		if(dao.updateInquiry(inquiry) == 0) {
+			throw new InquiryNotFoundException("can't find the same ID");
+		}
+	}
 }

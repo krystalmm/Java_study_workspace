@@ -8,12 +8,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.demo.entity.Inquiry;
+import com.example.demo.service.InquiryNotFoundException;
 import com.example.demo.service.InquiryService;
 
 @Controller
@@ -31,7 +33,25 @@ public class InquiryController {
 	public String index(Model model) {
 		// 一覧に表示するリストをinquiryServiceのgetAllメソッドでとってくる!
 		List<Inquiry> list = inquiryService.getAll();
-		// 上記listをinquiryListとしてViewで使えるようにする！
+		
+		// 例外処理の確認のための記述
+		Inquiry inquiry = new Inquiry();
+		inquiry.setId(4);  // idが4のinquiryはない！！
+		inquiry.setName("Jamie");
+		inquiry.setEmail("sample4@example.com");
+		inquiry.setContents("Hello.");
+		
+		inquiryService.update(inquiry);
+		
+//		メソッドの呼び出しに対して個別の処理を組む場合に使われる、try-catch文を使う！
+//		try {
+//			inquiryService.update(inquiry);
+//		} catch (InquiryNotFoundException e) {
+//			model.addAttribute("message", e);
+//			return "error/CustomPage";
+//		}
+		
+		// listをinquiryListとしてViewで使えるようにする！
 		model.addAttribute("inquiryList", list);
 		model.addAttribute("title", "Inquiry Index");
 		
@@ -84,5 +104,13 @@ public class InquiryController {
 		// フラッシュスコープを使って一時的なメッセージを表示させる！
 		redirectAttributes.addFlashAttribute("complete", "Registered!");
 		return "redirect:/inquiry/form";
+	}
+	
+	// 今のメソッドが例外をスローしたときにそれを補足するようなメソッドを用意！（InquiryNotFoundExceptionがスローされたらこのメソッド内の処理が実行される！）
+	// このメソッドをそのままControllerAdviceの方に書くと、全てのコントローラに対応する！！
+	@ExceptionHandler(InquiryNotFoundException.class)
+	public String handleException(InquiryNotFoundException e, Model model) {
+		model.addAttribute("message", e);
+		return "error/CustomPage";
 	}
 }

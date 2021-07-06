@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="utf-8" />
-<title>Error</title>
+	<meta charset="UTF-8">
+	<title>404 Error</title>
 </head>
 <body>
-<h1 th:text="${status} + ' ' + ${error}">404 Not Found</h1>
-<p>The requested URL was not found on this server</p>
-
-<p><a th:href="@{/}">Back to index</a></p>
+	<h1 th:text="${status} + ' ' + ${error}">title</h1>
+	<p>The request URL was not found on this server</p>
+	<p><a th:href="@{/inquiry}">Back to Inquiry Index</p>
 </body>
 </html>

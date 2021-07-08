@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.79.0">
-    <title>Starter Template for Bootstrap · Bootstrap v5.0</title>
+    <title th:text="${title}"></title>
 
     <link rel="canonical" href="https://getbootstrap.jp/docs/5.0/examples/starter-template/">
 
@@ -46,49 +46,36 @@
     <link href="starter-template.css" th:href="@{/css/starter-template.css}" rel="stylesheet">
   </head>
   <body>
-    
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">ナビゲーションバー</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item active">
-          <a class="nav-link" aria-current="page" href="#">ホーム</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">リンク</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">無効</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">ドロップダウン</a>
-          <ul class="dropdown-menu" aria-labelledby="dropdown01">
-            <li><a class="dropdown-item" href="#">アクション</a></li>
-            <li><a class="dropdown-item" href="#">その他のアクション</a></li>
-            <li><a class="dropdown-item" href="#">その他</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="検索" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+<!-- th:replaceはある場所と置き換えるという意味！ -->
+<div th:replace=~{block/header::headerA}></div>
 
 <main class="container">
 
-  <div class="starter-template text-center py-5 px-3">
-    <h1>Bootstrap スターターテンプレート</h1>
-    <p class="lead">このドキュメントを使ってあらゆるプロジェクトを高速にスタートしましょう。<br> このテキストと基礎となる HTML ドキュメントが手に入ります。</p>
-  </div>
-
+	<div class="starter-template text-center py-5 px-3">
+		<h1 th:text="${title}"></h1>
+		<p class="lead">このドキュメントを使ってあらゆるプロジェクトを高速にスタートしましょう。<br> このテキストと基礎となる HTML ドキュメントが手に入ります。</p>
+	</div>
+	<table class="table table-striped">
+	<thead>
+	    <tr>
+	      <th scope="col">id</th>
+	      <th scope="col">name</th>
+	      <th scope="col">email</th>
+	      <th scope="col">contents</th>
+	      <th scope="col">datetime</th>
+	    </tr>
+  	</thead>
+  	<tbody>
+		<tr th:each="inquiry : ${inquiryList}">
+			<th scope="row" th:text="${inquiry.id}">1</th>
+			<td th:text="${inquiry.name}"></td>
+			<td th:text="${inquiry.email}"></td>
+			<td th:text="${inquiry.contents}"></td>
+			<td th:text="${inquiry.created}"></td>
+		</tr>
+	  </tbody>
+	</table>
 </main><!-- /.container -->
 
 

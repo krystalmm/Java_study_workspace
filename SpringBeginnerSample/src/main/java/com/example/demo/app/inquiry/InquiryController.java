@@ -35,13 +35,13 @@ public class InquiryController {
 		List<Inquiry> list = inquiryService.getAll();
 		
 		// 例外処理の確認のための記述
-		Inquiry inquiry = new Inquiry();
-		inquiry.setId(4);  // idが4のinquiryはない！！
-		inquiry.setName("Jamie");
-		inquiry.setEmail("sample4@example.com");
-		inquiry.setContents("Hello.");
-		
-		inquiryService.update(inquiry);
+//		Inquiry inquiry = new Inquiry();
+//		inquiry.setId(4);  // idが4のinquiryはない！！
+//		inquiry.setName("Jamie");
+//		inquiry.setEmail("sample4@example.com");
+//		inquiry.setContents("Hello.");
+//		
+//		inquiryService.update(inquiry);
 		
 //		メソッドの呼び出しに対して個別の処理を組む場合に使われる、try-catch文を使う！
 //		try {
@@ -55,7 +55,7 @@ public class InquiryController {
 		model.addAttribute("inquiryList", list);
 		model.addAttribute("title", "Inquiry Index");
 		
-		return "inquiry/index";
+		return "inquiry/index_boot";
 	}
 	
 	@RequestMapping(value = "/form", method = RequestMethod.GET)

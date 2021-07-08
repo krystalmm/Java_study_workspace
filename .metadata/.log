@@ -5264,3 +5264,51 @@ java.util.concurrent.TimeoutException
 
 !ENTRY Activator 1 0 2021-07-08 22:30:22.670
 !MESSAGE Has main method computation for project 'SpringBeginnerSample'
+
+!ENTRY Activator 1 0 2021-07-08 22:49:32.006
+!MESSAGE Has main method computation for project 'SpringBeginnerSample'
+
+!ENTRY Activator 1 0 2021-07-08 22:49:32.120
+!MESSAGE Has main method computation for project 'SpringBeginnerSample'
+
+!ENTRY Activator 1 0 2021-07-08 22:49:35.282
+!MESSAGE Has main method computation for project 'SpringBeginnerSample'
+
+!ENTRY Activator 1 0 2021-07-08 22:49:35.390
+!MESSAGE Has main method computation for project 'SpringBeginnerSample'
+
+!ENTRY Activator 1 0 2021-07-08 22:50:42.666
+!MESSAGE Has main method computation for project 'SpringBeginnerSample'
+
+!ENTRY Activator 1 0 2021-07-08 22:50:43.223
+!MESSAGE Has main method computation for project 'SpringBeginnerSample'
+
+!ENTRY Activator 1 0 2021-07-08 22:52:04.748
+!MESSAGE Has main method computation for project 'SpringBeginnerSample'
+
+!ENTRY Activator 1 0 2021-07-08 22:52:05.358
+!MESSAGE Has main method computation for project 'SpringBeginnerSample'
+
+!ENTRY Activator 1 0 2021-07-08 22:52:55.482
+!MESSAGE Has main method computation for project 'SpringBeginnerSample'
+
+!ENTRY Activator 1 0 2021-07-08 22:52:55.589
+!MESSAGE Has main method computation for project 'SpringBeginnerSample'
+
+!ENTRY Activator 1 0 2021-07-08 22:54:32.714
+!MESSAGE Has main method computation for project 'SpringBeginnerSample'
+
+!ENTRY Activator 1 0 2021-07-08 22:54:33.266
+!MESSAGE Has main method computation for project 'SpringBeginnerSample'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-08 22:56:53.150
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.fkfPmaAd
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-08 22:56:53.150
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.fkfPmaAd
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-08 22:56:53.150
+!MESSAGE subsribers = {sts4.classpath.XecRGCqv=クラスパス通知の送信(1420)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-07-08 22:56:53.150
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.fkfPmaAd => OK

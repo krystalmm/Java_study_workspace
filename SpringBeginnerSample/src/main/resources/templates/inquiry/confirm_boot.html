@@ -17,38 +17,34 @@
   </head>
 
   <body>
-
-	<div th:replace="~{block/header_boot::headerA_boot}"></div>
+	<div th:replace="~{block/header::headerA}"></div>
     <main role="main" class="container">
-
       <div class="starter-template">
         <h1 th:text="${title}">Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
       </div>
-
-
-<p>入力内容をご確認ください</p>
-<div th:object="${inquiryForm}">
-<div class="mb-5">
-<ul class="list-group">
-  <li th:text="*{name}"　class="list-group-item">Dapibus ac facilisis in</li>
-  <li th:text="*{email}"　class="list-group-item">Morbi leo risus</li>
-  <li th:text="*{contents}"class="list-group-item">Porta ac consectetur ac</li>
-</ul>
-</div>
-<form method="post" action="#" th:action="@{/inquiry/form}">
-	<input type="hidden" name="name" th:value="*{name}">
-	<input type="hidden" name="email" th:value="*{email}">
-	<input type="hidden" name="contents" th:value="*{contents}">
-	<button type="submit" class="btn btn-primary">戻る</button>
-</form>
-<form method="post" action="#" th:action="@{/inquiry/complete}">
-	<input type="hidden" name="name" th:value="*{name}">
-	<input type="hidden" name="email" th:value="*{email}">
-	<input type="hidden" name="contents" th:value="*{contents}">
-	<button type="submit" class="btn btn-primary">送信する</button>
-</form>
-</div>
+	  <p>入力内容をご確認ください</p>
+	  <div th:object="${inquiryForm}">
+	  <div class="mb-5">
+		  <ul class="list-group">
+		    <li th:text="*{name}"　class="list-group-item">Dapibus ac facilisis in</li>
+		    <li th:text="*{email}"　class="list-group-item">Morbi leo risus</li>
+			<li th:text="*{contents}"class="list-group-item">Porta ac consectetur ac</li>
+		  </ul>
+      </div>
+	  <form method="post" action="#" th:action="@{/inquiry/form}">
+	  	<input type="hidden" name="name" th:value="*{name}">
+		<input type="hidden" name="email" th:value="*{email}">
+		<input type="hidden" name="contents" th:value="*{contents}">
+		<button type="submit" class="btn btn-primary">戻る</button>
+	  </form>
+      <form method="post" action="#" th:action="@{/inquiry/complete}">
+		<input type="hidden" name="name" th:value="*{name}">
+		<input type="hidden" name="email" th:value="*{email}">
+		<input type="hidden" name="contents" th:value="*{contents}">
+		<button type="submit" class="btn btn-primary">送信する</button>
+	  </form>
+	</div>
 
     </main><!-- /.container -->
 
